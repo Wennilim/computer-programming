@@ -1,0 +1,22 @@
+// ConsoleApplication6.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	cout << "LIM WEN NI\n" << endl;
+	cout << "FTMK_BITI_S1G1" << endl;
+
+	float price = 9.90;
+	int quantity;
+	int DISC = 10;
+	float totalprice;
+	cout << "Please enter quantity purchased: " << endl;
+	cin >> quantity;
+	totalprice = (price*quantity)*(100 - DISC) / 100.00;
+	cout << "The totalprice is"<< totalprice << endl;
+	return 0;
+}
