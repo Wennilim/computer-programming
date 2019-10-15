@@ -1,0 +1,31 @@
+// ConsoleApplication7.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int i,r;
+	char again;
+	
+	do
+	{
+		cout << "Please enter an integer!\a" << endl;
+		cin >> i;
+		r = i % 2;
+		if (r != 0)
+			cout << "This is an odd number " << endl;
+		else
+			cout << "This is an even number" << endl;
+
+		cout << "Do you want to test another set of number?" << endl;
+		cin >> again;
+
+	}
+	while(again=='Y'||again=='y');
+
+    return 0;
+}
