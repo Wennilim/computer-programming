@@ -1,0 +1,40 @@
+// ConsoleApplication7.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int option,month;
+	cout <<"Please select your gym membership between 1-3 !\n \a" << endl;
+	cout <<"1-Adult Gym\n";
+	cout <<"2-Kids Gym\n";
+	cout <<"3-Senior Citizen Gym\n";
+	cin >> option;
+
+	cout << "Please enter your month that you need to subscribe! " << endl;
+	cin >> month;
+
+	switch (option)
+	{
+	case 1:
+		cout << "Adult Gym\n Price is RM150/month\n Total fees RM "<< month*150;
+		break;
+	case 2:
+		cout << "Kids Gym\n Price is RM120/month.\n Total fees RM "<< month *120;
+		break;
+	case 3:
+		cout << "Senior Citizen Gym\n This is free of charge!But you need to run at least 10 round!!!\n Total fees RM"<< month*0;
+		break;
+	case 4:
+		cout << "Exit";
+	default:
+		cout << "Invalid input!\a Please select your gym membership between 1-3" << endl;
+	}
+	cout << "\n Thanks for your selection." << endl;
+
+	return 0;
+}
