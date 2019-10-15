@@ -1,0 +1,68 @@
+// ConsoleApplication7.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+void repeat()
+{
+	int option;
+	cout <<setw(30)<< "Please select your gym membership between 1-3 ! \a" << endl;
+	cout <<setw(30)<<"1-Adult Gym\n";
+	cout <<setw(30)<<"2-Kids Gym\n";
+	cout <<setw(30)<<"3-Senior Citizen Gym\n";
+	cin >> option;
+
+	switch (option)
+	{
+	case 1:
+		cout << "Adult Gym\n Price is RM150/month.";
+		break;
+	case 2:
+		cout << "Kids Gym\n Price is RM120/month.";
+		break;
+	case 3:
+		cout << "Senior Citizen Gym\n This is free of charge!";
+		break;
+	case 4:
+		cout << "Exit ";
+	default:
+		cout << "Invalid input!\a Please select your gym membership between 1-3\n";
+
+	}
+	cout << "\n Thanks for your selection." << endl;
+}
+
+
+int main()
+{
+	int option;
+	cout <<setw(30)<< "Please select your gym membership between 1-3 !\n \a" << endl;
+	cout <<setw(30)<<"1-Adult Gym\n";
+	cout <<setw(30)<< "2-Kids Gym\n";
+	cout <<setw(30)<<"3-Senior Citizen Gym\n";
+	cin >> option;
+
+	switch (option)
+	{
+	case 1:
+		cout << "Adult Gym\n Price is RM150/month";
+		break;
+		case 2 :
+			cout << "Kids Gym\n Price is RM120/month.";
+			break;
+		case 3 :
+			cout << "Senior Citizen Gym\n This is free of charge!";
+			break;
+		case 4:
+			cout << "Exit";
+		default :
+			cout << "Invalid input!\a Please select your gym membership between 1-3" << endl;
+			repeat();
+	}
+	cout << "\n Thanks for your selection." << endl;
+
+    return 0;
+}
