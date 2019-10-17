@@ -1,0 +1,54 @@
+/ ConsoleApplication8.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include<conio.h>
+using namespace std;
+
+int main()
+{
+	int no[20], i, a = 0, b = 0, c = 0;
+	cout << "Please enter 20 integer, positive, negative or zeros" << endl;
+	for (i = 0; i < 20; i++)
+	{
+		cin >> no[i];
+		if (no[i] % 2 != 0)
+		{
+			a++;
+		}
+		else if (no[i] % 2 == 0)
+		{
+			b++;
+		}
+		else
+		{
+			cout << "Enter a valid integer\n";
+		}
+		if (no[i] == 0)
+		{
+			c++;
+		}
+
+
+	}
+
+	cout << "The numbers you entered are:\n";
+	cout << no[0] << "" << no[1] << "" << no[2] << "" << no[3] << "" << no[4] << "" << no[5] << "";
+	cout << no[6] << "" << no[7] << "" << no[8] << "" << no[9] << "" << no[10] << "" << no[11] << "";
+	cout << no[12] << "" << no[13] << "" << no[14] << "" << no[15] << "" << no[16] << "" << no[17] << "";
+	cout << no[18] << "" << no[19] << "\n\n";
+	cout << "There are" << b << "evens,which includes" << c << "zero.\n";
+	cout << "The number of odd numbers is" << a << "." << endl;
+	return 0;
+}
+
+	// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+	// Debug program: F5 or Debug > Start Debugging menu
+
+	// Tips for Getting Started: 
+	//   1. Use the Solution Explorer window to add/manage files
+	//   2. Use the Team Explorer window to connect to source control
+	//   3. Use the Output window to see build output and other messages
+	//   4. Use the Error List window to view errors
+	//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+	//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
