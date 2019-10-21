@@ -1,0 +1,23 @@
+// practice-6.4-02
+//
+
+#include <iostream>
+using namespace std;
+
+const double PI = 3.142;
+double circumference(float rad);
+
+int main()
+{
+	float radius;
+	cout << "Enter radius of the circle:";
+	cin >> radius;
+	cout << "The circumference of the circle with radius= " << radius << " is ";
+	cout << circumference(radius) << endl;
+	return 0;
+}
+
+double circumference(float r)
+{
+	return (2 * PI * r);
+}
