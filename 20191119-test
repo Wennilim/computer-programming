@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+
+int main()
+{
+	int x, z;
+
+	
+		cout << "Please enter your ID number,Thank you!" << endl;
+		cin >> x;
+		cout << "Your ID number is " << x << endl;
+
+		z = x / 5;
+
+	do
+	{
+		if (z >= 20 && z <= 25)
+			cout << "Bus A" << endl;
+		else if (z >= 26 && z <= 30)
+			cout << "Bus B " << endl;
+		else if (z >= 31 && z <= 35)
+			cout << "Bus C" << endl;
+		else if (z >= 36 && z <= 40)
+			cout << "Bus D " << endl;
+
+	} 
+
+
+	return 0;
+}
