@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include<iostream>
 #include<cmath>
 using namespace std;
@@ -6,28 +5,40 @@ using namespace std;
 
 int main()
 {
-	int x, z;
+	string name;
+	double x,z;
+	int i = 1;
+	char again;
 
-	
-		cout << "Please enter your ID number,Thank you!" << endl;
+	do
+
+	{
+		
+		cout << "Please enter your ID number,Thank you! \n" << endl;
 		cin >> x;
-		cout << "Your ID number is " << x << endl;
+		cout << "ID number:" << x << endl;
+		
 
 		z = x / 5;
 
-	do
-	{
 		if (z >= 20 && z <= 25)
-			cout << "Bus A" << endl;
+			cout << "Your bus is Bus A!\a\n" << endl;
 		else if (z >= 26 && z <= 30)
-			cout << "Bus B " << endl;
+			cout << "Your bus is Bus B!\a\n" << endl;
 		else if (z >= 31 && z <= 35)
-			cout << "Bus C" << endl;
+			cout << "Your bus is Bus C!\a\n" << endl;
 		else if (z >= 36 && z <= 40)
-			cout << "Bus D " << endl;
+			cout << "Your bus is Bus D!\a\n" << endl;
+		else if (z >= 40)
+			cout << "Invalid input\a\n" << endl;
 
-	} 
+		cout << "If you need to insert the information again,please enter 'Q' or 'q',thank you! " << endl;
+		cin >> again;
 
+	} while (again == 'Q' || again == 'q');
+		
 
+		
 	return 0;
+	
 }
