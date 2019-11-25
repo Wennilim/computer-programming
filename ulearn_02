@@ -1,0 +1,38 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+	const int NUM_EMPLOYEES = 25;
+	int hours[NUM_EMPLOYEES];
+	int count;
+	int numberofEmployees;
+
+	ifstream inputFile;
+	inputFile.open("employeeHours.txt");
+	if (!inputFile)
+	{
+		cout << "Error finding input file"<<endl;
+		system("pause");
+		exit(-1);
+	}
+	count = 0;
+	while (!inputFile.eof())
+	{
+		inputFile >> hours[count];
+		count++;
+	}
+	numberofEmployees = count;
+
+	cout << "The hours you entered are: ";
+
+	for (count = 0; count < numberofEmployees; count++)
+		cout << " " << hours[count];
+
+	cout << endl;
+
+	system("pause");
+	return 0;
+
+}
