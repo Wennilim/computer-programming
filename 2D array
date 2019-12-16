@@ -1,0 +1,44 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+	const int num_div = 3;
+	const int num_qtr = 4;
+	double sales[num_div][num_qtr];
+	double totalSales = 0;
+	int x, y;
+
+	cout << "This program will calculate the total sales of\n";
+	cout << "all the company's division.\n";
+	cout << "Enter the following sales data:\n";
+
+	for (x = 0; x < num_div; x++)
+	{
+		for (y = 0; y < num_qtr; y++)
+		{
+			cout << "Division " << (x + 1);
+			cout << ", Quarter " << (y + 1) << ": $";
+			cin >> sales[x][y];
+
+		}
+		cout << endl;
+
+	}
+
+	for (x = 0; x < num_div; x++)
+	{
+		for (y = 0; y < num_qtr; y++)
+			totalSales += sales[x][y];
+
+	}
+
+	cout << fixed << showpoint << setprecision(2);
+	cout << "The total sales for the company are: $";
+	cout << totalSales << endl;
+
+
+	return 0;
+
+}
