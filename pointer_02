@@ -1,0 +1,38 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+	double* sales, total = 0.0, average;
+	int day, x;
+	cout << "how many days of sales figures do you hit?";
+	cin >> day;
+
+	sales = new double[day];
+
+	cout << "please enter the sales figure below: \n";
+	for (x = 0; x < day; x++)
+	{
+		cout << "day" << (x + 1) << ":";
+		cin >> sales[x];
+	}
+		
+	for (x = 0; x < day; x++)
+	{
+		total += sales[x];
+	}
+	
+	average = total / day;
+
+	cout << fixed << showpoint << setprecision(3);
+	cout << "total sales: $ " << total << endl;
+	cout << "average sales:$ " << average << endl;
+
+	delete[]sales;
+	sales = 0;
+
+
+	return 0;
+}
+
