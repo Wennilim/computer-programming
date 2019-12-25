@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	const int SIZE = 9;
+	int set[SIZE] = { 1,2,3,4,5,6,7,8,9 };			//array
+	int* numptr;									//pointer
+	
+	numptr = set;
+
+	cout << "The ascending number are: \n";
+	for (int x = 0; x < SIZE; x++)
+	{
+		cout << *numptr << " " ;
+		numptr++;
+	}
+
+	cout << endl;
+
+	cout << "The descending number are: \n";
+	for (int x = 0; x < SIZE; x++)
+	{
+		numptr--;
+		cout << *numptr << " " ;
+		
+	}
+
+	
+
+	return 0;
+}
